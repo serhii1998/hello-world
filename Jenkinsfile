@@ -42,7 +42,7 @@ pipeline {
               script {
                  sh 'docker run -d --name jenkins_husak -p 8090:8080 "$registry:v$BUILD_NUMBER" '
                  sh 'sleep 20'
-                 sh 'curl http://localhost:8090/webapp'
+                 sh 'curl http://localhost:8090/webapp/'
                  sh 'docker stop jenkins_husak '
                  sh 'docker rm jenkins_husak '
               }
